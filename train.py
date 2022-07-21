@@ -122,6 +122,7 @@ def train_one_epoch(
         out_criterion = criterion(out_net, d)
         out_criterion["loss"].backward()
         if clip_max_norm > 0:
+            # clip_grad_norm_梯度剪裁，即设置一个梯度大小的上限(只解决梯度爆炸问题，不解决梯度消失问题)
             torch.nn.utils.clip_grad_norm_(model.parameters(), clip_max_norm)
         optimizer.step()
 
@@ -310,6 +311,7 @@ def main(argv):
     criterion = RateDistortionLoss(lmbda=args.lmbda)
 
     last_epoch = 0
+    print("Loading", args.checkpoint)
     if args.checkpoint:  # load from previous checkpoint
         print("Loading", args.checkpoint)
         checkpoint = torch.load(args.checkpoint, map_location=device)
