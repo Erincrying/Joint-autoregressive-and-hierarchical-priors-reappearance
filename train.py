@@ -279,7 +279,7 @@ def main(argv):
     # 区分数据集文件夹下的train、test做字符串拆分区分两个数据集
     train_dataset = ImageFolder(args.dataset, split="train", transform=train_transforms)
     test_dataset = ImageFolder(args.dataset, split="test", transform=test_transforms)
-
+    # torch.cuda.is_available只有在PyTorch GPU版本上才会执行
     device = "cuda" if args.cuda and torch.cuda.is_available() else "cpu"
     # 加载数据集以及相应的参数
     train_dataloader = DataLoader(
