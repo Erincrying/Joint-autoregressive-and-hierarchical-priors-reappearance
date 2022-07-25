@@ -24,8 +24,8 @@ psnr_result = [
     ]
 
 
-bpp_myself = [0.11311848958333331, 0.1898600260416667]
-psnr_myself = [ 27.9804873104851, 29.69223977516354]
+bpp_myself = [0.11311848958333331, 0.1898600260416667, 0.35229153103298616]
+psnr_myself = [ 27.9804873104851, 29.69223977516354, 31.694376047084095]
 
 # 第一个码率点
 bpp_myself_FIR_01 = [0.11311848958333331]
@@ -39,6 +39,9 @@ psnr_myself_FIR_02 = [	27.919279305731433]
 bpp_myself_SEC_01 = [0.1898600260416667]
 psnr_myself_SEC_01 = [29.69223977516354]
 
+# 第三个码率点
+bpp_myself_THI_01 = [0.35229153103298616]
+psnr_myself_THI_01 = [31.694376047084095]
 # 添加横纵坐标与标题
 plt.xlabel('bit rate [bit/px]')
 plt.ylabel('PSNR[db]')
@@ -62,8 +65,12 @@ plt.plot(bpp_myself, psnr_myself, label='myself')
 # plt.plot(bpp_myself_FIR_02, psnr_myself_FIR_02, label='joint_FIR_02')
 
 # 第二个码率点
-plt.scatter(bpp_myself_SEC_01, psnr_myself_SEC_01)
-plt.plot(bpp_myself_SEC_01, psnr_myself_SEC_01, label='joint_SEC_01')
+# plt.scatter(bpp_myself_SEC_01, psnr_myself_SEC_01)
+# plt.plot(bpp_myself_SEC_01, psnr_myself_SEC_01, label='joint_SEC_01')
+
+# 第二个码率点
+plt.scatter(bpp_myself_THI_01, psnr_myself_THI_01)
+plt.plot(bpp_myself_THI_01, psnr_myself_THI_01, label='joint_THI_01')
 #添加网格信息
 plt.grid(True, linestyle='--', alpha=0.5) #默认是True，风格设置为虚线，alpha为透明度
 plt.legend() # 为了能显示label
