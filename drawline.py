@@ -24,8 +24,8 @@ psnr_result = [
     ]
 
 
-bpp_myself = [0.11311848958333331, 0.1898600260416667, 0.35229153103298616]
-psnr_myself = [ 27.9804873104851, 29.69223977516354, 31.694376047084095]
+bpp_myself = [0.11311848958333331, 0.1898600260416667, 0.34497409396701384, 0.550320095486111]
+psnr_myself = [ 27.9804873104851, 29.69223977516354, 31.70264841162641, 33.72843470073433]
 
 # 第一个码率点
 bpp_myself_FIR_01 = [0.11311848958333331]
@@ -43,6 +43,8 @@ psnr_myself_SEC_01 = [29.69223977516354]
 bpp_myself_THI_01 = [0.35229153103298616]
 psnr_myself_THI_01 = [31.694376047084095]
 
+bpp_myself_THI_02 = [0.34497409396701384]
+psnr_myself_THI_02 = [31.70264841162641]
 
 # 第四个码率点
 bpp_myself_FOUR_01 = [0.550320095486111]
@@ -81,7 +83,8 @@ plt.plot(bpp_myself, psnr_myself, label='myself')
 # plt.scatter(bpp_myself_THI_01, psnr_myself_THI_01)
 # plt.plot(bpp_myself_THI_01, psnr_myself_THI_01, label='joint_THI_01')
 
-
+# plt.scatter(bpp_myself_THI_02, psnr_myself_THI_02)
+# plt.plot(bpp_myself_THI_02, psnr_myself_THI_02, label='joint_THI_02')
 # 第四个码率点
 plt.scatter(bpp_myself_FOUR_01, psnr_myself_FOUR_01)
 plt.plot(bpp_myself_FOUR_01, psnr_myself_FOUR_01, label='joint_FOUR_01')
