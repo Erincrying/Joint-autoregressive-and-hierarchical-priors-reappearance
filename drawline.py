@@ -50,7 +50,8 @@ psnr_myself_THI_02 = [31.70264841162641]
 bpp_myself_FOUR_01 = [0.550320095486111]
 psnr_myself_FOUR_01 = [33.72843470073433]
 
-
+bpp_myself_FOUR_02 = [0.5457661946614584]
+psnr_myself_FOUR_02 = [33.686422857353115]
 
 
 # 添加横纵坐标与标题
@@ -89,6 +90,8 @@ plt.plot(bpp_myself, psnr_myself, label='myself')
 plt.scatter(bpp_myself_FOUR_01, psnr_myself_FOUR_01)
 plt.plot(bpp_myself_FOUR_01, psnr_myself_FOUR_01, label='joint_FOUR_01')
 
+plt.scatter(bpp_myself_FOUR_02, psnr_myself_FOUR_02)
+plt.plot(bpp_myself_FOUR_02, psnr_myself_FOUR_02, label='joint_FOUR_02')
 
 #添加网格信息
 plt.grid(True, linestyle='--', alpha=0.5) #默认是True，风格设置为虚线，alpha为透明度
