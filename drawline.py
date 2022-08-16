@@ -24,8 +24,11 @@ psnr_result = [
     ]
 
 
-bpp_myself = [0.11311848958333331, 0.1898600260416667, 0.34497409396701384, 0.550320095486111, 0.7960645887586807, 0.9485236273871527]
-psnr_myself = [ 27.9804873104851, 29.69223977516354, 31.70264841162641, 33.72843470073433, 35.549931949747794, 36.489859806079174]
+# bpp_myself = [0.11311848958333331, 0.1898600260416667, 0.34497409396701384, 0.550320095486111, 0.7960645887586807, 0.9485236273871527]
+# psnr_myself = [ 27.9804873104851, 29.69223977516354, 31.70264841162641, 33.72843470073433, 35.549931949747794, 36.489859806079174]
+
+bpp_myself = [0.11311848958333331, 0.1898600260416667, 0.34497409396701384, 0.5446946885850694]
+psnr_myself = [ 27.9804873104851, 29.69223977516354, 31.70264841162641, 33.75013402805966]
 
 # 第一个码率点
 bpp_myself_FIR_01 = [0.11311848958333331]
@@ -53,6 +56,8 @@ psnr_myself_FOUR_01 = [33.72843470073433]
 bpp_myself_FOUR_02 = [0.5457661946614584]
 psnr_myself_FOUR_02 = [33.686422857353115]
 
+bpp_myself_FOUR_03 = [0.5446946885850694]
+psnr_myself_FOUR_03 = [33.75013402805966]
 
 # 第五个码率点
 bpp_myself_FIVE_01 = [0.7960645887586807]
@@ -101,11 +106,14 @@ plt.plot(bpp_myself, psnr_myself, label='myself')
 # plt.scatter(bpp_myself_THI_02, psnr_myself_THI_02)
 # plt.plot(bpp_myself_THI_02, psnr_myself_THI_02, label='joint_THI_02')
 # 第四个码率点
-# plt.scatter(bpp_myself_FOUR_01, psnr_myself_FOUR_01)
-# plt.plot(bpp_myself_FOUR_01, psnr_myself_FOUR_01, label='joint_FOUR_01')
+plt.scatter(bpp_myself_FOUR_01, psnr_myself_FOUR_01)
+plt.plot(bpp_myself_FOUR_01, psnr_myself_FOUR_01, label='joint_FOUR_01')
 
-# plt.scatter(bpp_myself_FOUR_02, psnr_myself_FOUR_02)
-# plt.plot(bpp_myself_FOUR_02, psnr_myself_FOUR_02, label='joint_FOUR_02')
+plt.scatter(bpp_myself_FOUR_02, psnr_myself_FOUR_02)
+plt.plot(bpp_myself_FOUR_02, psnr_myself_FOUR_02, label='joint_FOUR_02')
+
+plt.scatter(bpp_myself_FOUR_03, psnr_myself_FOUR_03)
+plt.plot(bpp_myself_FOUR_03, psnr_myself_FOUR_03, label='joint_FOUR_03')
 
 # 第五个码率点
 # plt.scatter(bpp_myself_FIVE_01, psnr_myself_FIVE_01)
@@ -115,11 +123,11 @@ plt.plot(bpp_myself, psnr_myself, label='myself')
 # plt.plot(bpp_myself_FIVE_02, psnr_myself_FIVE_02, label='joint_FIVE_02')
 
 # 第六个码率点
-plt.scatter(bpp_myself_SIX_01, psnr_myself_SIX_01)
-plt.plot(bpp_myself_SIX_01, psnr_myself_SIX_01, label='joint_SIX_01')
+# plt.scatter(bpp_myself_SIX_01, psnr_myself_SIX_01)
+# plt.plot(bpp_myself_SIX_01, psnr_myself_SIX_01, label='joint_SIX_01')
 
-plt.scatter(bpp_myself_SIX_02, psnr_myself_SIX_02)
-plt.plot(bpp_myself_SIX_02, psnr_myself_SIX_02, label='joint_SIX_02')
+# plt.scatter(bpp_myself_SIX_02, psnr_myself_SIX_02)
+# plt.plot(bpp_myself_SIX_02, psnr_myself_SIX_02, label='joint_SIX_02')
 
 
 #添加网格信息
