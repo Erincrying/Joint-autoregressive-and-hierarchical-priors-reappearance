@@ -66,6 +66,9 @@ psnr_myself_FIVE_01 = [35.549931949747794]
 bpp_myself_FIVE_02 = [0.822838677300347]
 psnr_myself_FIVE_02 = [35.525695706455444]
 
+bpp_myself_FIVE_03 = [0.8254496256510416]
+psnr_myself_FIVE_03 = [35.46308217787015]
+
 # 第六个码率点
 bpp_myself_SIX_01 = [0.9789598253038193]
 psnr_myself_SIX_01 = [36.47576705830845]
@@ -106,21 +109,24 @@ plt.plot(bpp_myself, psnr_myself, label='myself')
 # plt.scatter(bpp_myself_THI_02, psnr_myself_THI_02)
 # plt.plot(bpp_myself_THI_02, psnr_myself_THI_02, label='joint_THI_02')
 # 第四个码率点
-plt.scatter(bpp_myself_FOUR_01, psnr_myself_FOUR_01)
-plt.plot(bpp_myself_FOUR_01, psnr_myself_FOUR_01, label='joint_FOUR_01')
+# plt.scatter(bpp_myself_FOUR_01, psnr_myself_FOUR_01)
+# plt.plot(bpp_myself_FOUR_01, psnr_myself_FOUR_01, label='joint_FOUR_01')
 
-plt.scatter(bpp_myself_FOUR_02, psnr_myself_FOUR_02)
-plt.plot(bpp_myself_FOUR_02, psnr_myself_FOUR_02, label='joint_FOUR_02')
+# plt.scatter(bpp_myself_FOUR_02, psnr_myself_FOUR_02)
+# plt.plot(bpp_myself_FOUR_02, psnr_myself_FOUR_02, label='joint_FOUR_02')
 
-plt.scatter(bpp_myself_FOUR_03, psnr_myself_FOUR_03)
-plt.plot(bpp_myself_FOUR_03, psnr_myself_FOUR_03, label='joint_FOUR_03')
+# plt.scatter(bpp_myself_FOUR_03, psnr_myself_FOUR_03)
+# plt.plot(bpp_myself_FOUR_03, psnr_myself_FOUR_03, label='joint_FOUR_03')
 
 # 第五个码率点
-# plt.scatter(bpp_myself_FIVE_01, psnr_myself_FIVE_01)
-# plt.plot(bpp_myself_FIVE_01, psnr_myself_FIVE_01, label='joint_FIVE_01')
+plt.scatter(bpp_myself_FIVE_01, psnr_myself_FIVE_01)
+plt.plot(bpp_myself_FIVE_01, psnr_myself_FIVE_01, label='joint_FIVE_01')
 
-# plt.scatter(bpp_myself_FIVE_02, psnr_myself_FIVE_02)
-# plt.plot(bpp_myself_FIVE_02, psnr_myself_FIVE_02, label='joint_FIVE_02')
+plt.scatter(bpp_myself_FIVE_02, psnr_myself_FIVE_02)
+plt.plot(bpp_myself_FIVE_02, psnr_myself_FIVE_02, label='joint_FIVE_02')
+
+plt.scatter(bpp_myself_FIVE_03, psnr_myself_FIVE_03)
+plt.plot(bpp_myself_FIVE_03, psnr_myself_FIVE_03, label='joint_FIVE_03')
 
 # 第六个码率点
 # plt.scatter(bpp_myself_SIX_01, psnr_myself_SIX_01)
