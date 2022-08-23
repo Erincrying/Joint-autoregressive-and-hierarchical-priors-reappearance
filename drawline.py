@@ -84,6 +84,8 @@ psnr_myself_SIX_02 = [36.489859806079174]
 bpp_myself_SIX_03 = [0.9661492241753473]
 psnr_myself_SIX_03 = [36.47805391147329]
 
+bpp_myself_SIX_04 = [0.9533962673611112]
+psnr_myself_SIX_04 = [36.481174174512624]
 # 添加横纵坐标与标题
 plt.xlabel('bit rate [bit/px]')
 plt.ylabel('PSNR[db]')
@@ -150,6 +152,9 @@ plt.plot(bpp_myself_SIX_02, psnr_myself_SIX_02, label='joint_SIX_02')
 
 plt.scatter(bpp_myself_SIX_03, psnr_myself_SIX_03)
 plt.plot(bpp_myself_SIX_03, psnr_myself_SIX_03, label='joint_SIX_03')
+
+plt.scatter(bpp_myself_SIX_04, psnr_myself_SIX_04)
+plt.plot(bpp_myself_SIX_04, psnr_myself_SIX_04, label='joint_SIX_04')
 #添加网格信息
 plt.grid(True, linestyle='--', alpha=0.5) #默认是True，风格设置为虚线，alpha为透明度
 plt.legend() # 为了能显示label
