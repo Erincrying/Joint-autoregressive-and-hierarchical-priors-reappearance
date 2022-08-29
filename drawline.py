@@ -27,8 +27,8 @@ psnr_result = [
 # bpp_myself = [0.11311848958333331, 0.1898600260416667, 0.34497409396701384, 0.550320095486111, 0.7960645887586807, 0.9485236273871527]
 # psnr_myself = [ 27.9804873104851, 29.69223977516354, 31.70264841162641, 33.72843470073433, 35.549931949747794, 36.489859806079174]
 
-bpp_myself = [0.11311848958333331, 0.1898600260416667, 0.34497409396701384, 0.5446946885850694, 0.796875]
-psnr_myself = [ 27.9804873104851, 29.69223977516354, 31.70264841162641, 33.75013402805966, 35.55966067123389]
+bpp_myself = [0.11311848958333331, 0.1898600260416667, 0.34497409396701384, 0.5446946885850694, 0.796875, 0.9485236273871527]
+psnr_myself = [ 27.9804873104851, 29.69223977516354, 31.70264841162641, 33.75013402805966, 35.55966067123389, 36.489859806079174]
 
 # 第一个码率点
 bpp_myself_FIR_01 = [0.11311848958333331]
@@ -92,6 +92,9 @@ psnr_myself_SIX_05 = [36.439243257400996]
 
 bpp_myself_SIX_06 = [0.9677632649739584]
 psnr_myself_SIX_06 = [36.46840360457957]
+
+bpp_myself_SIX_07 = [0.9946933322482637]
+psnr_myself_SIX_07 = [36.40668225802234]
 # 添加横纵坐标与标题
 plt.xlabel('bit rate [bit/px]')
 plt.ylabel('PSNR[db]')
@@ -150,23 +153,26 @@ plt.plot(bpp_myself, psnr_myself, label='myself')
 # plt.scatter(bpp_myself_FIVE_05, psnr_myself_FIVE_05)
 # plt.plot(bpp_myself_FIVE_05, psnr_myself_FIVE_05, label='joint_FIVE_05')
 # 第六个码率点
-plt.scatter(bpp_myself_SIX_01, psnr_myself_SIX_01)
-plt.plot(bpp_myself_SIX_01, psnr_myself_SIX_01, label='joint_SIX_01')
+# plt.scatter(bpp_myself_SIX_01, psnr_myself_SIX_01)
+# plt.plot(bpp_myself_SIX_01, psnr_myself_SIX_01, label='joint_SIX_01')
 
-plt.scatter(bpp_myself_SIX_02, psnr_myself_SIX_02)
-plt.plot(bpp_myself_SIX_02, psnr_myself_SIX_02, label='joint_SIX_02')
+# plt.scatter(bpp_myself_SIX_02, psnr_myself_SIX_02)
+# plt.plot(bpp_myself_SIX_02, psnr_myself_SIX_02, label='joint_SIX_02')
 
-plt.scatter(bpp_myself_SIX_03, psnr_myself_SIX_03)
-plt.plot(bpp_myself_SIX_03, psnr_myself_SIX_03, label='joint_SIX_03')
+# plt.scatter(bpp_myself_SIX_03, psnr_myself_SIX_03)
+# plt.plot(bpp_myself_SIX_03, psnr_myself_SIX_03, label='joint_SIX_03')
 
-plt.scatter(bpp_myself_SIX_04, psnr_myself_SIX_04)
-plt.plot(bpp_myself_SIX_04, psnr_myself_SIX_04, label='joint_SIX_04')
+# plt.scatter(bpp_myself_SIX_04, psnr_myself_SIX_04)
+# plt.plot(bpp_myself_SIX_04, psnr_myself_SIX_04, label='joint_SIX_04')
 
-plt.scatter(bpp_myself_SIX_05, psnr_myself_SIX_05)
-plt.plot(bpp_myself_SIX_05, psnr_myself_SIX_05, label='joint_SIX_05')
+# plt.scatter(bpp_myself_SIX_05, psnr_myself_SIX_05)
+# plt.plot(bpp_myself_SIX_05, psnr_myself_SIX_05, label='joint_SIX_05')
 
-plt.scatter(bpp_myself_SIX_06, psnr_myself_SIX_06)
-plt.plot(bpp_myself_SIX_06, psnr_myself_SIX_06, label='joint_SIX_06')
+# plt.scatter(bpp_myself_SIX_06, psnr_myself_SIX_06)
+# plt.plot(bpp_myself_SIX_06, psnr_myself_SIX_06, label='joint_SIX_06')
+
+# plt.scatter(bpp_myself_SIX_06, psnr_myself_SIX_07)
+# plt.plot(bpp_myself_SIX_06, psnr_myself_SIX_06, label='joint_SIX_07')
 #添加网格信息
 plt.grid(True, linestyle='--', alpha=0.5) #默认是True，风格设置为虚线，alpha为透明度
 plt.legend() # 为了能显示label
