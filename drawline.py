@@ -87,6 +87,9 @@ psnr_myself_FIVE_07 = [35.67110124865172]
 
 bpp_myself_FIVE_08 = [0.8459574381510415]
 psnr_myself_FIVE_08 = [35.58530749459595]
+
+bpp_myself_FIVE_09 = [0.9462517632378472]
+psnr_myself_FIVE_09 = [35.63010021106881]
 # 第六个码率点
 bpp_myself_SIX_01 = [0.9789598253038193]
 psnr_myself_SIX_01 = [36.47576705830845]
@@ -174,6 +177,10 @@ plt.plot(bpp_myself_FIVE_07, psnr_myself_FIVE_07, label='joint_FIVE_07')
 
 plt.scatter(bpp_myself_FIVE_08, psnr_myself_FIVE_08)
 plt.plot(bpp_myself_FIVE_08, psnr_myself_FIVE_08, label='joint_FIVE_08')
+
+
+plt.scatter(bpp_myself_FIVE_09, psnr_myself_FIVE_09)
+plt.plot(bpp_myself_FIVE_09, psnr_myself_FIVE_09, label='joint_FIVE_09')
 # 第六个码率点
 # plt.scatter(bpp_myself_SIX_01, psnr_myself_SIX_01)
 # plt.plot(bpp_myself_SIX_01, psnr_myself_SIX_01, label='joint_SIX_01')
