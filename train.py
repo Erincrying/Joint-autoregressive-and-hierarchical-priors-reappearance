@@ -1,7 +1,7 @@
 # 训练模型
 
 import os
-os.environ['CUDA_VISIBLE_DEVICES'] = "0, 1" # 使用gpu
+os.environ['CUDA_VISIBLE_DEVICES'] = "0" # 使用gpu
 
 import argparse
 import math
