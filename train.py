@@ -1,7 +1,7 @@
 # 训练模型
 
 import os
-os.environ['CUDA_VISIBLE_DEVICES'] = "1" # 使用gpu
+os.environ['CUDA_VISIBLE_DEVICES'] = "0" # 使用gpu
 
 import argparse
 import math
@@ -18,6 +18,8 @@ from torchvision import transforms
 
 from compressai.datasets import ImageFolder
 from compressai.zoo import image_models
+
+import torchsummary
 
 # 率失真
 class RateDistortionLoss(nn.Module):
@@ -300,7 +302,7 @@ def main(argv):
 
     net = image_models[args.model](quality=3)
     net = net.to(device)
-
+    print(torchsummary.summary(net, (3, 256, 256), device="cuda"))
     if args.cuda and torch.cuda.device_count() > 1:
         net = CustomDataParallel(net)
     # 优化器设置，configure_optimizers包含了相应的参数设置
