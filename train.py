@@ -1,7 +1,9 @@
 # 训练模型
 
 import os
-os.environ['CUDA_VISIBLE_DEVICES'] = "0" # 使用gpu
+os.environ['CUDA_VISIBLE_DEVICES'] = "1" # 使用gpu
+
+
 
 import argparse
 import math
@@ -19,7 +21,22 @@ from torchvision import transforms
 from compressai.datasets import ImageFolder
 from compressai.zoo import image_models
 
-import torchsummary
+# import torchsummary
+
+# 限制0号设备的显存的使用量为0.5，就是半张卡那么多，比如12G卡，设置0.5就是6G。
+# torch.cuda.set_per_process_memory_fraction(0.2, 0)
+# torch.cuda.empty_cache()
+# # 计算一下总内存有多少。
+# total_memory = torch.cuda.get_device_properties(0).total_memory
+# # 使用0.499的显存:
+# tmp_tensor = torch.empty(int(total_memory * 0.199), dtype=torch.int8, device='cuda')
+
+# # 清空该显存：
+# del tmp_tensor
+# torch.cuda.empty_cache()
+
+# # 下面这句话会触发显存OOM错误，因为刚好触碰到了上限:
+# torch.empty(total_memory // 2, dtype=torch.int8, device='cuda')
 
 # 率失真
 class RateDistortionLoss(nn.Module):
@@ -302,7 +319,7 @@ def main(argv):
 
     net = image_models[args.model](quality=3)
     net = net.to(device)
-    print(torchsummary.summary(net, (3, 256, 256), device="cuda"))
+    # print(torchsummary.summary(net, (3, 256, 256), device="cuda"))
     if args.cuda and torch.cuda.device_count() > 1:
         net = CustomDataParallel(net)
     # 优化器设置，configure_optimizers包含了相应的参数设置
