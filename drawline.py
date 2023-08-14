@@ -45,6 +45,9 @@ psnr_myself_FIR_02 = [	27.919279305731433]
 bpp_myself_SEC_01 = [0.1898600260416667]
 psnr_myself_SEC_01 = [29.69223977516354]
 
+bpp_myself_renew_SEC_01 = [0.19067721896701387]
+psnr_myself_renew_SEC_01 = [29.650577472987905]
+
 # 第三个码率点
 bpp_myself_THI_01 = [0.35229153103298616]
 psnr_myself_THI_01 = [31.694376047084095]
@@ -161,6 +164,9 @@ plt.plot(bpp_myself, psnr_myself, label='myself')
 # plt.scatter(bpp_myself_SEC_01, psnr_myself_SEC_01)
 # plt.plot(bpp_myself_SEC_01, psnr_myself_SEC_01, label='joint_SEC_01')
 
+plt.scatter(bpp_myself_renew_SEC_01, psnr_myself_renew_SEC_01)
+plt.plot(bpp_myself_renew_SEC_01, psnr_myself_renew_SEC_01, label='joint_renew_SEC_01')
+
 # 第三个码率点
 # plt.scatter(bpp_myself_THI_01, psnr_myself_THI_01)
 # plt.plot(bpp_myself_THI_01, psnr_myself_THI_01, label='joint_THI_01')
@@ -168,8 +174,8 @@ plt.plot(bpp_myself, psnr_myself, label='myself')
 # plt.scatter(bpp_myself_THI_02, psnr_myself_THI_02)
 # plt.plot(bpp_myself_THI_02, psnr_myself_THI_02, label='joint_THI_02')
 
-plt.scatter(bpp_myself_renew_THI_01, psnr_myself_renew_THI_01)
-plt.plot(bpp_myself_renew_THI_01, psnr_myself_renew_THI_01, label='joint_renew_THI_01')
+# plt.scatter(bpp_myself_renew_THI_01, psnr_myself_renew_THI_01)
+# plt.plot(bpp_myself_renew_THI_01, psnr_myself_renew_THI_01, label='joint_renew_THI_01')
 # 第四个码率点
 # plt.scatter(bpp_myself_FOUR_01, psnr_myself_FOUR_01)
 # plt.plot(bpp_myself_FOUR_01, psnr_myself_FOUR_01, label='joint_FOUR_01')
