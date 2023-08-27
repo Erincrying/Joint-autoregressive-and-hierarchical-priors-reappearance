@@ -38,8 +38,10 @@ bpp_myself_FIR_01 = [0.11311848958333331]
 psnr_myself_FIR_01 = [ 27.9804873104851]
 
 bpp_myself_FIR_02 = [0.11440022786458331]
-psnr_myself_FIR_02 = [	27.919279305731433]
+psnr_myself_FIR_02 = [27.919279305731433]
 
+bpp_myself_renew_FIR_01 = [0.11554972330729164]
+psnr_myself_renew_FIR_01 = [27.855968011293736]
 
 # 第二个码率点
 bpp_myself_SEC_01 = [0.1898600260416667]
@@ -67,6 +69,9 @@ psnr_myself_FOUR_02 = [33.686422857353115]
 
 bpp_myself_FOUR_03 = [0.5446946885850694]
 psnr_myself_FOUR_03 = [33.75013402805966]
+
+bpp_myself_renew_FOUR_01 = [0.35755072699652785]
+psnr_myself_renew_FOUR_01 = [31.742489476340282]
 
 # 第五个码率点
 bpp_myself_FIVE_01 = [0.7960645887586807]
@@ -160,12 +165,14 @@ plt.plot(bpp_myself, psnr_myself, label='myself')
 # plt.scatter(bpp_myself_FIR_02, psnr_myself_FIR_02)
 # plt.plot(bpp_myself_FIR_02, psnr_myself_FIR_02, label='joint_FIR_02')
 
+plt.scatter(bpp_myself_renew_FIR_01, psnr_myself_renew_FIR_01)
+plt.plot(bpp_myself_renew_FIR_01, psnr_myself_renew_FIR_01, label='joint_renew_FIR_01')
 # 第二个码率点
 # plt.scatter(bpp_myself_SEC_01, psnr_myself_SEC_01)
 # plt.plot(bpp_myself_SEC_01, psnr_myself_SEC_01, label='joint_SEC_01')
 
-plt.scatter(bpp_myself_renew_SEC_01, psnr_myself_renew_SEC_01)
-plt.plot(bpp_myself_renew_SEC_01, psnr_myself_renew_SEC_01, label='joint_renew_SEC_01')
+# plt.scatter(bpp_myself_renew_SEC_01, psnr_myself_renew_SEC_01)
+# plt.plot(bpp_myself_renew_SEC_01, psnr_myself_renew_SEC_01, label='joint_renew_SEC_01')
 
 # 第三个码率点
 # plt.scatter(bpp_myself_THI_01, psnr_myself_THI_01)
@@ -186,6 +193,8 @@ plt.plot(bpp_myself_renew_SEC_01, psnr_myself_renew_SEC_01, label='joint_renew_S
 # plt.scatter(bpp_myself_FOUR_03, psnr_myself_FOUR_03)
 # plt.plot(bpp_myself_FOUR_03, psnr_myself_FOUR_03, label='joint_FOUR_03')
 
+# plt.scatter(bpp_myself_renew_FOUR_01, psnr_myself_renew_FOUR_01)
+# plt.plot(bpp_myself_renew_FOUR_01, psnr_myself_renew_FOUR_01, label='joint_renew_FOUR_01')
 # 第五个码率点
 # plt.scatter(bpp_myself_FIVE_01, psnr_myself_FIVE_01)
 # plt.plot(bpp_myself_FIVE_01, psnr_myself_FIVE_01, label='joint_FIVE_01')
