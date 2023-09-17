@@ -110,6 +110,9 @@ psnr_myself_FIVE_11 = [35.418804324085045]
 
 bpp_myself_renew_FIVE_01 = [0.7961595323350693]
 psnr_myself_renew_FIVE_01 = [35.4872122103295]
+
+bpp_myself_renew_SIX_01 = [0.9043002658420138]
+psnr_myself_renew_SIX_01 = [36.41452321335724]
 # 第六个码率点
 bpp_myself_SIX_01 = [0.9789598253038193]
 psnr_myself_SIX_01 = [36.47576705830845]
@@ -196,8 +199,8 @@ plt.plot(bpp_myself, psnr_myself, label='myself')
 # plt.scatter(bpp_myself_FOUR_03, psnr_myself_FOUR_03)
 # plt.plot(bpp_myself_FOUR_03, psnr_myself_FOUR_03, label='joint_FOUR_03')
 
-plt.scatter(bpp_myself_renew_FOUR_01, psnr_myself_renew_FOUR_01)
-plt.plot(bpp_myself_renew_FOUR_01, psnr_myself_renew_FOUR_01, label='joint_renew_FOUR_01')
+# plt.scatter(bpp_myself_renew_FOUR_01, psnr_myself_renew_FOUR_01)
+# plt.plot(bpp_myself_renew_FOUR_01, psnr_myself_renew_FOUR_01, label='joint_renew_FOUR_01')
 # 第五个码率点
 # plt.scatter(bpp_myself_FIVE_01, psnr_myself_FIVE_01)
 # plt.plot(bpp_myself_FIVE_01, psnr_myself_FIVE_01, label='joint_FIVE_01')
@@ -234,8 +237,10 @@ plt.plot(bpp_myself_renew_FOUR_01, psnr_myself_renew_FOUR_01, label='joint_renew
 # plt.scatter(bpp_myself_FIVE_11, psnr_myself_FIVE_11)
 # plt.plot(bpp_myself_FIVE_11, psnr_myself_FIVE_11, label='joint_FIVE_11')
 
-plt.scatter(bpp_myself_renew_FIVE_01, psnr_myself_renew_FIVE_01)
-plt.plot(bpp_myself_renew_FIVE_01, psnr_myself_renew_FIVE_01, label='joint_renew_FIVE_01')
+# plt.scatter(bpp_myself_renew_FIVE_01, psnr_myself_renew_FIVE_01)
+# plt.plot(bpp_myself_renew_FIVE_01, psnr_myself_renew_FIVE_01, label='joint_renew_FIVE_01')
+
+
 # 第六个码率点
 # plt.scatter(bpp_myself_SIX_01, psnr_myself_SIX_01)
 # plt.plot(bpp_myself_SIX_01, psnr_myself_SIX_01, label='joint_SIX_01')
@@ -272,6 +277,9 @@ plt.plot(bpp_myself_renew_FIVE_01, psnr_myself_renew_FIVE_01, label='joint_renew
 
 # plt.scatter(bpp_myself_SIX_12, psnr_myself_SIX_12)
 # plt.plot(bpp_myself_SIX_12, psnr_myself_SIX_12, label='joint_SIX_12')
+
+plt.scatter(bpp_myself_renew_SIX_01, psnr_myself_renew_SIX_01)
+plt.plot(bpp_myself_renew_SIX_01, psnr_myself_renew_SIX_01, label='joint_renew_FIVE_02')
 #添加网格信息
 plt.grid(True, linestyle='--', alpha=0.5) #默认是True，风格设置为虚线，alpha为透明度
 plt.legend() # 为了能显示label
