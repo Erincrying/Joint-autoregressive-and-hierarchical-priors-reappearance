@@ -111,8 +111,7 @@ psnr_myself_FIVE_11 = [35.418804324085045]
 bpp_myself_renew_FIVE_01 = [0.7961595323350693]
 psnr_myself_renew_FIVE_01 = [35.4872122103295]
 
-bpp_myself_renew_SIX_01 = [0.9043002658420138]
-psnr_myself_renew_SIX_01 = [36.41452321335724]
+
 # 第六个码率点
 bpp_myself_SIX_01 = [0.9789598253038193]
 psnr_myself_SIX_01 = [36.47576705830845]
@@ -149,6 +148,12 @@ psnr_myself_SIX_11 = [36.35831786049349]
 
 bpp_myself_SIX_12 = [0.8976915147569446]
 psnr_myself_SIX_12 = [36.353639767400686]
+
+bpp_myself_renew_SIX_01 = [0.9043002658420138]
+psnr_myself_renew_SIX_01 = [36.41452321335724]
+
+bpp_myself_renew_SIX_02 = [0.9052564832899305]
+psnr_myself_renew_SIX_02 = [36.447741877916954]
 # 添加横纵坐标与标题
 plt.xlabel('bit rate [bit/px]')
 plt.ylabel('PSNR[db]')
@@ -279,7 +284,10 @@ plt.plot(bpp_myself, psnr_myself, label='myself')
 # plt.plot(bpp_myself_SIX_12, psnr_myself_SIX_12, label='joint_SIX_12')
 
 plt.scatter(bpp_myself_renew_SIX_01, psnr_myself_renew_SIX_01)
-plt.plot(bpp_myself_renew_SIX_01, psnr_myself_renew_SIX_01, label='joint_renew_FIVE_02')
+plt.plot(bpp_myself_renew_SIX_01, psnr_myself_renew_SIX_01, label='joint_renew_SIX_01')
+
+plt.scatter(bpp_myself_renew_SIX_02, psnr_myself_renew_SIX_02)
+plt.plot(bpp_myself_renew_SIX_02, psnr_myself_renew_SIX_02, label='joint_renew_SIX_02')
 #添加网格信息
 plt.grid(True, linestyle='--', alpha=0.5) #默认是True，风格设置为虚线，alpha为透明度
 plt.legend() # 为了能显示label
