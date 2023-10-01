@@ -32,6 +32,10 @@ psnr_result = [
 bpp_myself = [0.11440022786458331, 0.1898600260416667, 0.34497409396701384, 0.5446946885850694, 0.7282545301649305, 0.8879496256510415]
 psnr_myself = [27.919279305731433, 29.69223977516354, 31.70264841162641, 33.75013402805966, 35.418804324085045, 36.348351733617946]
 
+# 重新跑的模型
+bpp_myself_renew = [0.11554972330729164, 0.19067721896701387, 0.35755072699652785, 0.5448438856336805, 0.7439371744791666, 0.9052564832899305]
+psnr_myself_renew = [27.855968011293736, 29.650577472987905, 31.742489476340282, 33.70316561607868, 35.45471992454302, 36.447741877916954]
+decoding_time_myself_renew = [10.023716380198797, 11.155629823605219, 10.518302192290625, 10.174526929855347, 10.44794342915217, 10.750619957844416]
 
 # 第一个码率点
 bpp_myself_FIR_01 = [0.11311848958333331]
@@ -111,6 +115,8 @@ psnr_myself_FIVE_11 = [35.418804324085045]
 bpp_myself_renew_FIVE_01 = [0.7961595323350693]
 psnr_myself_renew_FIVE_01 = [35.4872122103295]
 
+bpp_myself_renew_FIVE_02 = [0.7439371744791666]
+psnr_myself_renew_FIVE_02 = [35.45471992454302]
 
 # 第六个码率点
 bpp_myself_SIX_01 = [0.9789598253038193]
@@ -168,6 +174,9 @@ plt.scatter(bpp_myself, psnr_myself)
 plt.plot(bpp_myself, psnr_myself, label='myself')
 # plt.plot(bpp_myself, psnr_myself, color='g', linestyle='-.', label = 'myself')
 
+# 自己的psnr重新跑
+plt.scatter(bpp_myself_renew, psnr_myself_renew)
+plt.plot(bpp_myself_renew, psnr_myself_renew, label='myself_renew')
 
 # 第一个码率点
 # plt.scatter(bpp_myself_FIR_01, psnr_myself_FIR_01)
@@ -245,6 +254,9 @@ plt.plot(bpp_myself, psnr_myself, label='myself')
 # plt.scatter(bpp_myself_renew_FIVE_01, psnr_myself_renew_FIVE_01)
 # plt.plot(bpp_myself_renew_FIVE_01, psnr_myself_renew_FIVE_01, label='joint_renew_FIVE_01')
 
+# plt.scatter(bpp_myself_renew_FIVE_02, psnr_myself_renew_FIVE_02)
+# plt.plot(bpp_myself_renew_FIVE_02, psnr_myself_renew_FIVE_02, label='joint_renew_FIVE_02')
+
 
 # 第六个码率点
 # plt.scatter(bpp_myself_SIX_01, psnr_myself_SIX_01)
@@ -283,11 +295,11 @@ plt.plot(bpp_myself, psnr_myself, label='myself')
 # plt.scatter(bpp_myself_SIX_12, psnr_myself_SIX_12)
 # plt.plot(bpp_myself_SIX_12, psnr_myself_SIX_12, label='joint_SIX_12')
 
-plt.scatter(bpp_myself_renew_SIX_01, psnr_myself_renew_SIX_01)
-plt.plot(bpp_myself_renew_SIX_01, psnr_myself_renew_SIX_01, label='joint_renew_SIX_01')
+# plt.scatter(bpp_myself_renew_SIX_01, psnr_myself_renew_SIX_01)
+# plt.plot(bpp_myself_renew_SIX_01, psnr_myself_renew_SIX_01, label='joint_renew_SIX_01')
 
-plt.scatter(bpp_myself_renew_SIX_02, psnr_myself_renew_SIX_02)
-plt.plot(bpp_myself_renew_SIX_02, psnr_myself_renew_SIX_02, label='joint_renew_SIX_02')
+# plt.scatter(bpp_myself_renew_SIX_02, psnr_myself_renew_SIX_02)
+# plt.plot(bpp_myself_renew_SIX_02, psnr_myself_renew_SIX_02, label='joint_renew_SIX_02')
 #添加网格信息
 plt.grid(True, linestyle='--', alpha=0.5) #默认是True，风格设置为虚线，alpha为透明度
 plt.legend() # 为了能显示label
